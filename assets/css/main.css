@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+  font-family: "Dosis", sans-serif;
+  font-family: "Raleway", sans-serif;
+*/
+
+:root {
+    /*root=html*/
+    --mainFont: "Roboto", sans-serif;
+    --mainColor: #ff5722;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Dosis", sans-serif;
+}
+
+body {
+    font-family: var(--mainFont);
+}
+
+.text-main-color,
+.bg-main-color {
+    background-color: var(--mainColor);
+}
+
+.hire-me-btn i {
+    color: #000;
+    background-color: #fff;
+    transition: transform 0.5s;
+}
+
+.hire-me-btn:hover i {
+    color: #fff;
+    background-color: #000;
+    transform: rotate(360deg);
+}
+
+.nav-item .nav-link {
+    position: relative;
+}
+
+.nav-item .nav-link.active::after {
+    content: ' ';
+    position: absolute;
+    background-color: var(--mainColor);
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-item .nav-link::after {
+    content: ' ';
+    position: absolute;
+    background-color: var(--mainColor);
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.nav-item .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar {
+    /*or sticky-top in bootstrap */
+    position: fixed;
+    width: 100%;
+}
+
+/*start header section*/
+.header {
+    background-image: url('../img/header/header.png');
+    /*height: 100vh;/*or vh-100 using bootstrap*/
+    background-size: cover;
+    background-position: -100px;
+    background-attachment: fixed;
+}
+
+.header .container .icons i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid green;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    gap: 10px;
+}
+
+.header .icons i:hover {
+    transform: rotate(360deg);
+}
+
+.header .icons i:nth-of-type(1) {
+    color: #3b5999;
+    border-color: #3b5999;
+}
+
+.header .icons i:nth-of-type(1):hover {
+    color: #fff;
+    border-color: #3b5999;
+}
+
+
+.header .icons i:nth-of-type(2) {
+    color: #eb5f93;
+    border-color: #eb5f93;
+}
+
+.header .icons i:nth-of-type(2):hover {
+    color: #fff;
+    border-color: #eb5f93;
+}
+
+.header .icons i:nth-of-type(3) {
+    color: #3873ff;
+    border-color: #3873ff;
+}
+
+.header .icons i:nth-of-type(3):hover {
+    color: #fff;
+    border-color: #3873ff;
+}
+
+.header .icons i:nth-of-type(4) {
+    color: #0077b5;
+    border-color: #0077b5;
+}
+
+.header .icons i:nth-of-type(4):hover {
+    color: #fff;
+    border-color: #0077b5;
+}
+
+.header .icons i:nth-of-type(5) {
+    color: #dd5249;
+    border-color: #dd5249;
+}
+
+.header .icons i:nth-of-type(5):hover {
+    color: #fff;
+    border-color: #dd5249;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.about h3 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+
+.title span {
+    width: 100px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 14px;
+}
+
+.title h3 {
+    position: relative;
+}
+
+.title h3::after {
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: var(--mainColor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+
+/*start service section*/
+.service-item {
+    position: relative;
+}
+
+.service-item:after {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f3f3f3;
+    position: absolute;
+    z-index: -1;
+    /*to make the position background the item*/
+    height: 0;
+    transition: height 0.7s;
+}
+
+.service-item:hover:after {
+    height: 100%;
+}
+
+
+/*end service section*/
+
+/*start portfolio section*/
+
+.portfolio {
+    background-color: rgb(243, 243, 243);
+}
+
+.portfolio-item:after {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f3f3f3;
+    position: absolute;
+    z-index: -1;
+    /*to make the position background the item*/
+    height: 0;
+    transition: height 0.7s;
+}
+
+/*end portfolio section*/
+
+/*start resume section*/
+.resume .row h2 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #3b3b3b;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+
+.resume .row h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3b3b3b;
+    font-family: 'Roboto', sans-serif;
+}
+
+.resume .row h4 {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ff724c;
+    margin-bottom: 10px;
+}
+
+.resume .row p {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #3b3b3b;
+    margin-top: 7px;
+    line-height: 23px;
+}
+
+.resume .row img {
+  width: 100%;
+  height: 100%;
+}
+
+/*end resume section*/
+
+/* start download section*/
+.Download {
+    background-image: url('../img/download/brandbg.png');
+    /*height: 100vh;/*or vh-100 using bootstrap*/
+    background-size: cover;
+    height: 30vh;
+}
+
+/* end download section*/
+
+.carousel-indicators [data-bs-target] {
+    width: 20px;
+    height: 20px;
+   border-radius: 50%;
+   top: 50px;
+   border: 1px solid var(--mainColor);
+   background-color: transparent;
+   position: relative;
+}
+
+.carousel-indicators .active {
+    background-color: var(--mainColor);
+}
+
+
+.Testimonials img{
+    width: 300px;
+    height: 300px;
+}
+
+.resume-section img{
+   width: 500px;
+    height: 300px; 
+}
+
